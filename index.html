@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Song Emotion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-zinc-800 text-white overflow-hidden" onload="bodyLoaded()">
+    <div class="flex flex-col w-screen h-screen px-4 pt-4 overflow-auto">
+      <div class="flex flex-col md:min-w-96 min-w-80 w-fit">
+        <h1 class="md:text-8xl text-7xl mb-4 w-full break-words md:break-keep">
+          Song Emotion
+        </h1>
+        <form
+          onsubmit="return false"
+          class="relative flex flex-row w-full h-fit"
+        >
+          <input
+            type="text"
+            class="py-2 px-4 rounded-md !outline-none border-2 border-transparent focus:border-2 focus:border-white bg-zinc-600 transition-all duration-200 w-full"
+            id="song-title"
+            placeholder="What are you looking for?"
+          />
+          <button
+            class="bg-white text-zinc-800 rounded-md absolute right-0 z-10 h-full w-28 font-bold transition-transform duration-200 ease-in-out hover:peer-[(:placeholder-shown)]:text-red-600 hover:peer-[(:placeholder-shown)]:shadow-red-600/60 hover:scale-110 hover:shadow-lg hover:shadow-green-600/60 hover:text-green-700"
+            onclick="search()"
+            id="search-button"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <button
+        class="group flex flex-row items-center justify-center gap-2 absolute top-2 right-4 bg-white text-zinc-800 rounded-md p-2 z-10 h-11 text-center w-fit font-bold transition-transform duration-200 ease-in-out hover:scale-110 hover:shadow-lg hover:shadow-green-600/60 hover:text-green-700"
+        id="auth-button"
+        type="button"
+        onclick="authorizeUser()"
+      >
+        <svg
+          class="group-hover:fill-green-700"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm31.07-46.26a8,8,0,0,1-10.81,3.33,42.79,42.79,0,0,0-40.52,0,8,8,0,0,1-7.48-14.14,59.33,59.33,0,0,1,55.48,0A8,8,0,0,1,159.07,169.74Zm32-56a8,8,0,0,1-10.83,3.29,110.62,110.62,0,0,0-104.46,0,8,8,0,0,1-7.54-14.12,126.67,126.67,0,0,1,119.54,0A8,8,0,0,1,191.06,113.76Zm-16,28a8,8,0,0,1-10.82,3.3,77,77,0,0,0-72.48,0,8,8,0,0,1-7.52-14.12,93,93,0,0,1,87.52,0A8,8,0,0,1,175.06,141.76Z"
+          ></path>
+        </svg>
+        Continue with spotify
+      </button>
+
+      <div id="content-container" class="w-full h-full mt-4 overflow-auto">
+        <div id="song" class="flex flex-row flex-wrap gap-2 w-full"></div>
+        <div
+          id="songs"
+          class="grid grid-cols-4 content-start gap-2 w-full mb-2"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>

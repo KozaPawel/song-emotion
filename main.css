@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.shadow-angry {
+    filter: drop-shadow(0 10px 8px rgba(207, 11, 11, 0.5)) drop-shadow(0 4px 3px rgba(207, 11, 11, 1));
+}
+
+.shadow-nervous {
+    filter: drop-shadow(0 10px 8px rgba(157, 23, 77, 0.5)) drop-shadow(0 4px 3px rgba(157, 23, 77, 1));
+}
+
+.shadow-bored {
+    filter: drop-shadow(0 10px 8px rgba(162, 28, 175, 0.5)) drop-shadow(0 4px 3px rgba(162, 28, 175, 1));
+}
+
+.shadow-sad {
+    filter: drop-shadow(0 10px 8px rgba(88, 28, 135, 0.5)) drop-shadow(0 4px 3px rgba(88, 28, 135, 1));
+}
+
+.shadow-excited {
+    filter: drop-shadow(0 10px 8px rgba(251, 146, 60, 0.5)) drop-shadow(0 4px 3px rgba(251, 146, 60, 1));
+}
+
+.shadow-calm {
+    filter: drop-shadow(0 10px 8px rgba(110, 231, 183, 0.5)) drop-shadow(0 4px 3px rgba(110, 231, 183, 1));
+}
+
+.shadow-sleepy {
+    filter: drop-shadow(0 10px 8px rgba(96, 165, 250, 0.5)) drop-shadow(0 4px 3px rgba(96, 165, 250, 1));
+}
+
+.shadow-happy {
+    filter: drop-shadow(0 10px 8px rgba(22, 163, 74, 0.5)) drop-shadow(0 4px 3px rgba(22, 163, 74, 1));
+}
+
+.shadow-pleased {
+    filter: drop-shadow(0 10px 8px rgba(135, 240, 173, 0.5)) drop-shadow(0 4px 3px rgba(135, 240, 173, 1));
+}
+
+.shadow-relaxed {
+    filter: drop-shadow(0 10px 8px rgba(8, 145, 178, 0.5)) drop-shadow(0 4px 3px rgba(8, 145, 178, 1));
+}
+
+.shadow-peaceful {
+    filter: drop-shadow(0 10px 8px rgba(14, 165, 233, 0.5)) drop-shadow(0 4px 3px rgba(14, 165, 233, 1));
+}
+
+.placeholder-animation {
+    overflow: hidden;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeholderAnimate;
+    background: linear-gradient(to right, #e4e4e7 2%, #a1a1aa 10%, #e4e4e7 33%);
+    background-size: 1200px;
+}
+
+@keyframes placeholderAnimate {
+    0%{ background-position: -700px 0; }
+    100%{ background-position: 700px 0; }
+}
