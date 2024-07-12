@@ -10,7 +10,7 @@ let refreshed_at = localStorage.getItem('refreshed_at') || null
 
 const bodyLoaded = () => {
   window.location.search.includes('error') &&
-    window.history.replaceState({}, document.title, '/')
+    window.history.replaceState({}, document.title, '/song-emotion')
 
   const accessTokenValid = access_token && access_token != 'undefined'
   const refreshTokenValid = refresh_token && refresh_token != 'undefined'
@@ -354,7 +354,7 @@ const getToken = (code) => {
       .then((data) => {
         processTokenResponse(data)
 
-        window.history.replaceState({}, document.title, '/')
+        window.history.replaceState({}, document.title, '/song-emotion')
         window.location.reload()
       })
   } catch (error) {
