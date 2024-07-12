@@ -1,5 +1,5 @@
 const clientId = 'cf0872f81fce49d88a9b88871839afa9'
-const redirectUri = 'http://localhost:5500'
+const redirectUri = 'https://kozapawel.github.io/song-emotion/'
 
 const urlParams = new URLSearchParams(window.location.search)
 let code = urlParams.get('code')
